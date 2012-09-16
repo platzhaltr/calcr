@@ -11,7 +11,7 @@ Or use multiple variables
 	variables.put("y", 7f);
 	float result = Calcr.parseFloat("1 + x / y", variables); // result = 7
 	
-## Development ##	 
+## Development ##
 
 Aa working version of [lingwah](http://code.google.com/p/lingwah/) is needed. I took the liberty of creating a mavenized version and fix a very small bug (in a test case).
 
