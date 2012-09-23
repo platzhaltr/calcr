@@ -13,14 +13,6 @@ Or use multiple variables
 	
 ## Development ##
 
-Aa working version of [lingwah](http://code.google.com/p/lingwah/) is needed. I took the liberty of creating a mavenized version and fix a very small bug (in a test case).
-
-	git clone git://github.com/oschrenk/lingwah.git
-	cd lingwah
-	mvn clean install
-
-After that you can install **calcr**
-
 	git clone git://github.com/platzhaltr/calcr.git
 	cd calcr
 	mvn clean install

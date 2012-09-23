@@ -101,4 +101,12 @@
 
 	</dependencies>
 
+	<repositories>
+		<repository>
+			<id>lingwah-repo</id>
+			<name>lingwah repository on GitHub</name>
+			<url>http://oschrenk.github.com/lingwah/repository/</url>
+		</repository>
+	</repositories>
+
 </project>
