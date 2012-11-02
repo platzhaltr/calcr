@@ -21,4 +21,6 @@ float result = Calcr.parseFloat("x / y", variables); // result = 6
 	cd calcr
 	mvn clean install
 
-	
+## Related work ##
+
+- [exp4j](https://github.com/fasseg/exp4j) Math expression evaluator with support for all `Math` operators functions and the possibility to create new ones.
