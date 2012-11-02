@@ -27,8 +27,6 @@ import com.googlecode.lingwah.parser.ParserReference;
  * 
  * @author Oliver Schrenk <oliver.schrenk@gmail.com>
  * 
- * 
- * 
  */
 
 public class CalcrGrammar extends Grammar {
@@ -43,8 +41,10 @@ public class CalcrGrammar extends Grammar {
 	public final Parser number = oneOrMore(digit);
 	public final Parser decimal = seq(opt(str('-')),
 			seq(number, opt(seq(str('.'), opt(number)))));
+
 	public final Parser variable = seq(oneOrMore(regex("[a-zA-z]")));
 	public final ParserReference expr = ref();
+
 	public final Parser addition = seq(expr, str('+'), expr).separatedBy(
 			opt(whitespace));
 	public final Parser subtraction = seq(expr, str('-'), expr).separatedBy(
@@ -53,12 +53,14 @@ public class CalcrGrammar extends Grammar {
 			opt(whitespace));
 	public final Parser division = seq(expr, str('/'), expr).separatedBy(
 			opt(whitespace));
-	public final Parser operator = first(multiplication, division, addition,
+
+	public final Parser operation = first(multiplication, division, addition,
 			subtraction);
+
 	public final Parser group = seq(str('('), expr, str(')')).separatedBy(
 			opt(whitespace));
 	{
-		expr.define(cho(decimal, variable, operator, group));
+		expr.define(cho(decimal, variable, operation, group));
 	}
 
 	private CalcrGrammar() {

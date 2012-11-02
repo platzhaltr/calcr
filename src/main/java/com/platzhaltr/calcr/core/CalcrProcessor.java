@@ -49,7 +49,7 @@ public class CalcrProcessor extends AbstractProcessor {
 		putResult(left.divide(right, 28, RoundingMode.HALF_UP));
 	}
 
-	public void completeOperator(final Match op) {
+	public void completeOperation(final Match op) {
 		putResult(getResult(op.getChildren().get(0)));
 	}
 
